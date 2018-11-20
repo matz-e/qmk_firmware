@@ -40,7 +40,7 @@ enum planck_keycodes {
 };
 
 #define MY_ENT MT(MOD_RSFT, KC_ENT)
-#define MY_ALT MT(MOD_LALT, KC_LCTL)
+#define MY_ALT MT(MOD_LALT, KC_PSCR)
 
 #define WIN_FUN MO(_WIN_FUN)
 #define ALT_FUN MO(_ALT_FUN)
