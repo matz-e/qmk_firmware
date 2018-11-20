@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "happy_planck.h"
+#include QMK_KEYBOARD_H
 #include "action_layer.h"
 
 extern keymap_config_t keymap_config;
@@ -95,22 +95,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_LOWER] = LAYOUT_planck_grid(
   KC_TILD, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR   , KC_ASTR   , KC_LPRN, KC_RPRN, KC_DEL ,
   _______, XXXXXXX, KC_HOME, KC_PGUP, KC_END , XXXXXXX, XXXXXXX, KC_UNDS   , KC_PLUS   , KC_LCBR, KC_RCBR, KC_PIPE,
-  _______, XXXXXXX, KC_VOLD, KC_PGDN, KC_VOLU, KC_MUTE, XXXXXXX, S(KC_NUHS), S(KC_NUBS), KC_QUOT, KC_PIPE , _______,
-  _______, _______, _______, _______, _______, KC_ESC , KC_ESC , _______   , _______   , KC_VOLD, KC_VOLU, KC_MPLY
+  _______, XXXXXXX, KC_VOLD, KC_PGDN, KC_VOLU, KC_MUTE, XXXXXXX, S(KC_NUHS), S(KC_NUBS), KC_QUOT, KC_PIPE, _______,
+  _______, _______, _______, _______, _______, KC_ESC , KC_ESC , _______   , _______   , _______, _______, _______
 ),
 
 [_RAISE] = LAYOUT_planck_grid(
   KC_GRV , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_DEL ,
   _______, XXXXXXX, KC_LEFT, KC_UP  , KC_RGHT, XXXXXXX, XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,
   _______, XXXXXXX, XXXXXXX, KC_DOWN, XXXXXXX, XXXXXXX, XXXXXXX, KC_NUHS, KC_NUBS, S(KC_QUOT), KC_BSLS, _______,
-  _______, _______, _______, _______, _______, KC_BSPC, KC_BSPC, _______, _______, KC_VOLD, KC_VOLU, KC_MPLY
+  _______, _______, _______, _______, _______, KC_BSPC, KC_BSPC, _______, _______, _______, _______, _______
 ),
 
 /* Adjust (Lower + Raise) */
 [_ADJUST] = LAYOUT_planck_grid(
-  _______, RESET  , DEBUG  , _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL,
+  _______, RESET  , DEBUG  , RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, KC_DEL ,
   _______, _______, MU_MOD , AU_ON  , AU_OFF , AG_NORM, AG_SWAP, QWERTY , COLEMAK, NUM_FUN, _______, _______,
-  _______, MUV_DE , MUV_IN , MU_ON  , MU_OFF , MI_ON  , MI_OFF , _______, _______, _______, _______, _______,
+  _______, MUV_DE , MUV_IN , MU_ON  , MU_OFF , MI_ON  , MI_OFF , TERM_ON, TERM_OFF, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
 )
 
