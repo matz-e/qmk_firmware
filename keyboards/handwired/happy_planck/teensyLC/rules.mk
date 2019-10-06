@@ -20,7 +20,6 @@ MCU_SERIES = KL2x
 #   - MK20DX128BLDR4 for Infinity with Kiibohd bootloader
 #   - MK20DX256BLDR8 for Infinity ErgoDox with Kiibohd bootloader
 MCU_LDSCRIPT = MKL26Z64
-# MCU_LDSCRIPT = MK20DX256
 
 # Startup code to use
 #  - it should exist in <chibios>/os/common/ports/ARMCMx/compilers/GCC/mk/
@@ -29,7 +28,6 @@ MCU_LDSCRIPT = MKL26Z64
 #   - k20x5 for Teensy 3.0 and Infinity KB
 #   - k20x7 for Teensy 3.1 and 3.2
 MCU_STARTUP = kl2x
-# MCU_STARTUP = k20x7
 
 # Board: it should exist either in <chibios>/os/hal/boards/
 #  or <this_dir>/boards
@@ -39,17 +37,14 @@ MCU_STARTUP = kl2x
 #   - PJRC_TEENSY_3_1 for Teensy 3.1 or 3.2
 #   - MCHCK_K20 for Infinity KB
 BOARD = PJRC_TEENSY_LC
-# BOARD = PJRC_TEENSY_3_1
 
 # Cortex version
 # Teensy LC is cortex-m0; Teensy 3.x are cortex-m4
 MCU  = cortex-m0
-# MCU  = cortex-m4
 
 # ARM version, CORTEX-M0/M1 are 6, CORTEX-M3/M4/M7 are 7
 # I.e. 6 for Teensy LC; 7 for Teensy 3.x
 ARMV = 6
-# ARMV = 7
 
 # Vector table for application
 # 0x00000000-0x00001000 area is occupied by bootlaoder.*/
