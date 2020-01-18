@@ -77,6 +77,7 @@ void matrix_init(void)
     LED_ON();
     wait_ms(500);
     LED_OFF();
+    print("\ninitializing matrix\n");
 }
 
 uint8_t matrix_scan(void)
@@ -84,9 +85,9 @@ uint8_t matrix_scan(void)
     for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
         select_row(i);
         //wait_us(30);  // without this wait read unstable value.
-		for (uint8_t i=0; i < 1; i++) { // Loop for very short delay, wait_us is returning a 1ms delay
-			LED_TGL(); // toggle the onboard LED attached to pin 13
-		}
+        for (uint8_t i=0; i < 1; i++) { // Loop for very short delay, wait_us is returning a 1ms delay
+            LED_TGL(); // toggle the onboard LED attached to pin 13
+        }
         matrix_row_t cols = read_cols();
         if (matrix_debouncing[i] != cols) {
             matrix_debouncing[i] = cols;
