@@ -87,3 +87,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+#define RGB_DI_PIN TEENSY_PIN26
+#define RGBLED_NUM 10
+#define RGBLIGHT_ANIMATIONS

@@ -16,8 +16,10 @@
 
 #include QMK_KEYBOARD_H
 #include "action_layer.h"
+#include "rgblight.h"
 
 extern keymap_config_t keymap_config;
+extern rgblight_config_t rgblight_config;
 
 enum planck_layers {
   _COLEMAK,
@@ -184,4 +186,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
   }
   return true;
+}
+
+void startup_user()
+{
+    rgblight_enable();
+    rgblight_setrgb(255, 0, 0);
 }
