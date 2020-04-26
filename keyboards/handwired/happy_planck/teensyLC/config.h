@@ -60,6 +60,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCING_DELAY 5
 
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
+#define IGNORE_MOD_TAP_INTERRUPT
+
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
@@ -87,6 +91,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
-#define RGB_DI_PIN TEENSY_PIN26
-#define RGBLED_NUM 10
-#define RGBLIGHT_ANIMATIONS
+#define RGB_DI_PIN TEENSY_PIN17
+#define RGBLED_NUM 1
+// #define RGBLIGHT_ANIMATIONS

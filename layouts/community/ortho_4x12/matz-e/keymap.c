@@ -69,10 +69,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_DENSE] = LAYOUT_planck_grid(
-  KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, _______,
-  _______, CTL_T(KC_A),    KC_R,    KC_S,    KC_T,    KC_D,    KC_H,    KC_N,    KC_E,    KC_I,    CTL_T(KC_O),    _______,
-  _______, SFT_T(KC_Z),    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_M,    KC_COMM, KC_DOT,  SFT_T(KC_SLSH), _______,
-  _______, _______,       _______,  KC_LGUI, LOWER,   KC_SPC,  KC_SPC,   RAISE,     MY_ALT, _______, _______,              _______
+  _______, KC_Q       , KC_W   , KC_F   , KC_P , KC_G  , KC_J  , KC_L , KC_U   , KC_Y   , KC_SCLN       , _______,
+  _______, CTL_T(KC_A), KC_R   , KC_S   , KC_T , KC_D  , KC_H  , KC_N , KC_E   , KC_I   , CTL_T(KC_O)   , _______,
+  _______, SFT_T(KC_Z), KC_X   , KC_C   , KC_V , KC_B  , KC_K  , KC_M , KC_COMM, KC_DOT , SFT_T(KC_SLSH), _______,
+  _______, _______    , _______, KC_LGUI, LOWER, KC_SPC, KC_SPC, RAISE, MY_ALT , _______, _______       , _______
 ),
 
 [_QWERTY] = LAYOUT_planck_grid(
@@ -105,16 +105,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_LOWER] = LAYOUT_planck_grid(
   KC_TILD, KC_EXLM, KC_AT  , KC_HASH, KC_DLR , KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL ,
-  _______, KC_TILD, KC_HOME, KC_PGUP, KC_END , XXXXXXX, XXXXXXX, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
-  _______, XXXXXXX, KC_VOLD, KC_PGDN, KC_VOLU, KC_MUTE, XXXXXXX, XXXXXXX, KC_DEL , KC_TAB , KC_ENT , _______,
+  _______, KC_TILD, KC_HOME, KC_PGUP, KC_END , KC_TILD, KC_PIPE, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE,
+  _______, XXXXXXX, KC_VOLD, KC_PGDN, KC_VOLU, KC_MUTE, XXXXXXX, KC_QUOT, KC_DEL , KC_TAB , KC_ENT , _______,
   _______, _______, _______, _______, _______, KC_ESC , KC_ESC , _______, _______, _______, _______, _______
 ),
 
 [_RAISE] = LAYOUT_planck_grid(
-  KC_GRV , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_DEL ,
-  _______, KC_GRV , KC_LEFT, KC_UP  , KC_RGHT, XXXXXXX, XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,
-  _______, XXXXXXX, XXXXXXX, KC_DOWN, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, KC_BSLS, _______,
-  _______, _______, _______, _______, _______, KC_BSPC, KC_BSPC, _______, _______, _______, _______, _______
+  KC_GRV , KC_1   , KC_2   , KC_3   , KC_4   , KC_5   , KC_6   , KC_7      , KC_8   , KC_9   , KC_0   , KC_DEL ,
+  _______, KC_GRV , KC_LEFT, KC_UP  , KC_RGHT, KC_GRV , KC_BSLS, KC_MINS   , KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,
+  _______, XXXXXXX, XXXXXXX, KC_DOWN, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_QUOT), KC_DEL , KC_TAB , KC_ENT , _______,
+  _______, _______, _______, _______, _______, KC_BSPC, KC_BSPC, _______   , _______, _______, _______, _______
 ),
 
 /* Adjust (Lower + Raise) */
@@ -192,4 +192,14 @@ void startup_user()
 {
     rgblight_enable();
     rgblight_setrgb(255, 0, 0);
+}
+
+void keyboard_post_init_user(void) {
+    // Customise these values to desired behaviour
+    /* debug_enable=true; */
+    /* debug_matrix=true; */
+    /* rgblight_enable(); */
+    /* rgblight_setrgb(255, 0, 0); */
+    //debug_keyboard=true;
+    //debug_mouse=true;
 }
